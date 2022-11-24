@@ -2,16 +2,16 @@ import React, { useRef, useState } from 'react'
 import { Form, Button, Card, Alert } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { useAuth } from '../contexts/AuthContext';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function ForgotPassword() {
     const emailRef = useRef();
-    
+
     const { resetPassword } = useAuth();
     const [error, setError] = useState('');
     const [message, setMessage] = useState('');
     const [loading, setLoading] = useState(false)
-    
+
 
     async function handleSubmit(e) {
         e.preventDefault()
@@ -41,15 +41,15 @@ export default function ForgotPassword() {
                             <Form.Label>Email</Form.Label>
                             <Form.Control type="email" ref={emailRef} required></Form.Control>
                         </Form.Group>
-                        <Button disabled={loading} className='w-100 mt-3' type="submit">Reset Password</Button>
+                        <Button disabled={loading} className='w-100 mt-3 colors' type="submit">Reset Password</Button>
                     </Form>
                     <div className='w-100 text-center mt-3'>
-                        <Link to='/login'>Login</Link>
+                        <Link className='link' to='/login'>Login</Link>
                     </div>
                 </Card.Body>
             </Card>
-            <div className='w-100 text-center mt-2'>
-                Need an account? <Link to='/signup'>Sign Up</Link>
+            <div className='w-100 text-center mt-2 text-white'>
+                Need an account? <Link className='link' to='/signup'>Sign Up</Link>
             </div>
         </div>
     )

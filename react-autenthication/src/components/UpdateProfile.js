@@ -59,12 +59,12 @@ export default function UpdateProfile() {
                             <Form.Label>Password Confirmation</Form.Label>
                             <Form.Control type="password" ref={passwordConfirmRef} placeholder='Leave blank to keep the same'></Form.Control>
                         </Form.Group>
-                        <Button disabled={loading} className='w-100 mt-3' type="submit">Update</Button>
+                        <Button disabled={loading} className='w-100 mt-3 colors' type="submit">Update</Button>
                     </Form>
                 </Card.Body>
             </Card>
             <div className='w-100 text-center mt-2'>
-                <Link to='/'>Cancel</Link>
+                <Link to='/' className='link text-white border-bottom' >Cancel</Link>
             </div>
         </div>
     )
