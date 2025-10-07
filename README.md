@@ -1,4 +1,4 @@
-# :sunflower: React Autenthication With Firebase And Routing :sunflower:
+# :sunflower: React Authentication With Firebase And Routing :sunflower:
 
 The project consists in creating a Firebase Setup which is a set of hosting services for any type of application. I used Firebase for the social authentication service.
 
